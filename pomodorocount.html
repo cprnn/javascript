@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pomodoro Timer</title>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+
+<script>
+
+var countdown = new
+
+var seconds = 0;
+var intervalo;
+var minutes;
+
+function pomodoro(minutes) {
+    seconds = minutes*60 || 0;
+
+    intervalo = setInterval(function(){
+
+        seconds--;
+     
+        if(!seconds){
+            clearInterval(intervalo);
+            alert("Your pomodoro timer is over, go get some rest!")
+        }
+        
+    }, 1000);
+        
+}
+
+</script>
+
+<button onclick="pomodoro(1)">Start</button>  <!-- teste de funcionamento -->
+
+</body>
+</html>
