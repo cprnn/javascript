@@ -1,21 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 
 <head>
     <title>Pomodoro Timer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Bootstrap CSS -->
+     <link href="">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 
 <body>
-
-    <p id="demo"></p>
+  <div class="container"></div>
+  <div class="card">
+    <div class="card-body">
+      <div id="pomodoro-container">
+        <div id="pomodoro-clock">
+          <div id="pomodoro-timer">
+            </div>
+              <div id="pomodoro-clock-actions">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-primary">Start</button>
+                  <button type="button" class="btn btn-primary">Pause</button>
+                  <button type="button" class="btn btn-primary">Stop</button>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
 
-var countdown = new
+let seconds = 0;
+let intervalo;
+let minutes;
+let min;
+let sec;
 
-var seconds = 0;
-var intervalo;
-var minutes;
+let countdown = new Date(`Jan 5, 2022 00:${min}:${sec}`).getTime;
+countDownDate.setMinutes(25);
+countDownDate.setSeconds(30);
 
 function pomodoro(minutes) {
     seconds = minutes*60 || 0;
@@ -35,7 +61,8 @@ function pomodoro(minutes) {
 
 </script>
 
-<button onclick="pomodoro(1)">Start</button>  <!-- teste de funcionamento -->
+<!-- <button onclick="pomodoro(1)">Start</button>  <!-- teste de funcionamento -->
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>
